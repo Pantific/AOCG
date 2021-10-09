@@ -1,0 +1,2 @@
+D:/Graphic/lab1/lab1/VSL/GLM/GLM/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+D:/Graphic/lab1/lab1/VSL/GLM/GLM/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
