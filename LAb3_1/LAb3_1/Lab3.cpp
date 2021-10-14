@@ -5,7 +5,6 @@
 #include <iostream>
 #include"GraphicObj.h"
 #include"Camera.h"
-// функция вызывается каждые 20 мс
 LARGE_INTEGER oldValue, newValue;
 GraphicObject GrOb[4];
 Camera camera(22.5,45,70.52);
