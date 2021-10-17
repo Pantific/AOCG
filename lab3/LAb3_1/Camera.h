@@ -7,7 +7,6 @@
 // КЛАСС ДЛЯ РАБОТЫ С КАМЕРОЙ
 class Camera
 {
-	// необходимые свойства
 	glm::vec3 position;
 	glm::vec3 spherical;
 public:
