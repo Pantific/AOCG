@@ -1,4 +1,5 @@
 ﻿  Lab3.cpp
-D:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(11,28): warning C4305: аргумент: усечение из "double" в "float"
-D:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(18,31): warning C4244: инициализация: преобразование "BOOL" в "float", возможна потеря данных
-  LAb3_1.vcxproj -> D:\Graphic\LAb3_1\Debug\LAb3_1.exe
+F:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(11,30): warning C4305: аргумент: усечение из "double" в "float"
+F:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(18,31): warning C4244: инициализация: преобразование "BOOL" в "float", возможна потеря данных
+F:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(20,13): warning C4305: return: усечение из "double" в "float"
+  LAb3_1.vcxproj -> F:\Graphic\LAb3_1\Debug\LAb3_1.exe

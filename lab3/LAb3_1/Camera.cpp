@@ -29,6 +29,8 @@ Camera::Camera(float r, float fi, float thet)
 
 void Camera::apply()
 {
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
 	float sinFi = sin(glm::radians(this->spherical.y));
 	float cosFi = cos(glm::radians(this->spherical.y));
 	float sinThet = sin(glm::radians(this->spherical.z));
@@ -39,17 +41,18 @@ void Camera::apply()
 		(this->spherical.x * sinThet * sinFi),
 		(this->spherical.x * cosThet)
 	);
-	//glMatrixMode
-	//glLoadIdentity
 	std::cout << position.x << " " << position.y << " " << position.z<<"\n";
+	//std::cout << spherical.x << " " << spherical.y << " " << spherical.z << "\n";
 	gluLookAt(position.x, position.y, position.z, 0, 0, 0, 0, 1, 0);
 };
 
 void Camera::GoLR(float right)
 { 
-	spherical.y +=right;
+	spherical.z +=right;
+
 }
 void Camera::GoUD(float up)
 {
-	spherical.z += up;
+	spherical.y += up;
+
 }

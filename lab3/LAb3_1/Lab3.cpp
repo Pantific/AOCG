@@ -5,9 +5,10 @@
 #include <iostream>
 #include"GraphicObj.h"
 #include"Camera.h"
+// функция вызывается каждые 20 мс
 LARGE_INTEGER oldValue, newValue;
 GraphicObject GrOb[4];
-Camera camera(22.5,45,70.52);
+Camera camera(22.5,45.0,70.52);
 float sec=0;
 float secLR = 0;
 float secUD = 0;
@@ -15,7 +16,8 @@ float Fr()
 {
 	QueryPerformanceCounter(&newValue);
 	float Simulation_Time_Passed = (QueryPerformanceFrequency(&oldValue) - QueryPerformanceFrequency(&newValue)) / QueryPerformanceFrequency(&newValue);
-	return Simulation_Time_Passed;
+	//return Simulation_Time_Passed;
+	return 0.17;
 }
 void Simulation()
 {
@@ -30,21 +32,27 @@ void Simulation()
 	if (CameraLeft == 1)
 	{
 		secLR = sec*(-1);
+		std::cout << "L\n";
+		camera.GoLR(secLR);
 	}
 	if(CameraRight==1)
 	{
 		secLR = sec;
+		std::cout << "R\n";
+		camera.GoLR(secLR);
 	}
-	camera.GoLR(secLR);
 	if (CameraDown == 1)
 	{
-		secLR = sec * (-1);
+		secUD = sec * (-1);
+		std::cout << "D\n";
+		camera.GoUD(secUD);
 	}
 	if (CameraUp == 1)
 	{
-		secLR = sec;
+		secUD = sec;
+		std::cout << "U\n";
+		camera.GoUD(secUD);
 	}
-	camera.GoUD(secUD);
 	// ПЕРЕРИСОВАТЬ ОКНО
 	glutPostRedisplay();
 };

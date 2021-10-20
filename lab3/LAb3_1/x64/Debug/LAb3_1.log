@@ -1,0 +1,21 @@
+﻿  Camera.cpp
+  GraphicObj.cpp
+  Lab3.cpp
+F:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(11,28): warning C4305: аргумент: усечение из "double" в "float"
+F:\Graphic\LAb3_1\LAb3_1\Lab3.cpp(18,31): warning C4244: инициализация: преобразование "BOOL" в "float", возможна потеря данных
+  Создание кода...
+GraphicObj.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutWireTeapot в функции "public: void __cdecl GraphicObject::draw(void)" (?draw@GraphicObject@@QEAAXXZ).
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutInitWindowPosition в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutInitWindowSize в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutInitDisplayMode в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutMainLoop в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutPostRedisplay в функции "void __cdecl Simulation(void)" (?Simulation@@YAXXZ).
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutSwapBuffers в функции "void __cdecl Display(void)" (?Display@@YAXXZ).
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutIdleFunc в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutKeyboardFunc в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutReshapeFunc в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp_glutDisplayFunc в функции main.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp___glutInitWithExit в функции glutInit_ATEXIT_HACK.
+Lab3.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp___glutCreateWindowWithExit в функции glutCreateWindow_ATEXIT_HACK.
+F:\Graphic\LAb3_1\LAb3_1\VSL\freeglut\lib\freeglut.lib : warning LNK4272: тип компьютера библиотеки "x86" конфликтует с типом целевого компьютера "x64"
+F:\Graphic\LAb3_1\x64\Debug\LAb3_1.exe : fatal error LNK1120: неразрешенных внешних элементов: 13
