@@ -5,10 +5,13 @@
 #include <iostream>
 #include"GraphicObj.h"
 #include"Camera.h"
+#include"Camera1.h"
 // функция вызывается каждые 20 мс
 LARGE_INTEGER oldValue, newValue;
 GraphicObject GrOb[4];
+bool cameraSwap = 0;
 Camera camera(22.5,45.0,70.52);
+Camera1 camera1(15, 15, 7.5);
 float sec=0;
 float secLR = 0;
 float secUD = 0;
@@ -29,29 +32,59 @@ void Simulation()
 	bool CameraDown = GetAsyncKeyState(VK_DOWN);
 	bool CameraForward = GetAsyncKeyState(VK_ADD);
 	bool CameraBackward = GetAsyncKeyState(VK_SUBTRACT);
-	if (CameraLeft == 1)
+	if (cameraSwap == 0)
 	{
-		secLR = sec*(-1);
-		std::cout << "L\n";
-		camera.GoLR(secLR);
+		if (CameraLeft == 1)
+		{
+			secLR = sec * (-1);
+			std::cout << "L\n";
+			camera.GoLR(secLR);
+		}
+		if (CameraRight == 1)
+		{
+			secLR = sec;
+			std::cout << "R\n";
+			camera.GoLR(secLR);
+		}
+		if (CameraDown == 1)
+		{
+			secUD = sec * (-1);
+			std::cout << "D\n";
+			camera.GoUD(secUD);
+		}
+		if (CameraUp == 1)
+		{
+			secUD = sec;
+			std::cout << "U\n";
+			camera.GoUD(secUD);
+		}
 	}
-	if(CameraRight==1)
+	if(cameraSwap==1)
 	{
-		secLR = sec;
-		std::cout << "R\n";
-		camera.GoLR(secLR);
-	}
-	if (CameraDown == 1)
-	{
-		secUD = sec * (-1);
-		std::cout << "D\n";
-		camera.GoUD(secUD);
-	}
-	if (CameraUp == 1)
-	{
-		secUD = sec;
-		std::cout << "U\n";
-		camera.GoUD(secUD);
+		if (CameraLeft == 1)
+		{
+			secLR = sec * (-1);
+			std::cout << "L\n";
+			camera1.GoLR(secLR);
+		}
+		if (CameraRight == 1)
+		{
+			secLR = sec;
+			std::cout << "R\n";
+			camera1.GoLR(secLR);
+		}
+		if (CameraDown == 1)
+		{
+			secUD = sec * (-1);
+			std::cout << "D\n";
+			camera1.GoUD(secUD);
+		}
+		if (CameraUp == 1)
+		{
+			secUD = sec;
+			std::cout << "U\n";
+			camera1.GoUD(secUD);
+		}
 	}
 	// ПЕРЕРИСОВАТЬ ОКНО
 	glutPostRedisplay();
@@ -67,7 +100,10 @@ void Display(void)
 	// включаем тест глубины
 	glEnable(GL_DEPTH_TEST);
 	// устанавливаем камеру
+	if(cameraSwap==0)
 	camera.apply();
+	if (cameraSwap == 1)
+		camera1.apply();
 	for (int i = 0; i < 4; i++)
 	{
 		GrOb[i].draw();
@@ -79,6 +115,10 @@ void Display(void)
 void KeyboardFunc(unsigned char key, int x, int y)
 {
 	std::cout << "Key is " << key<<"\n";
+	if (key == 'c' and cameraSwap == 0)
+		cameraSwap = 1;
+	else
+		cameraSwap = 0;
 };
 void Reshape(int w, int h)
 {

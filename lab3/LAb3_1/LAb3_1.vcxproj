@@ -20,11 +20,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Camera1.cpp" />
     <ClCompile Include="GraphicObj.cpp" />
     <ClCompile Include="Lab3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Camera1.h" />
     <ClInclude Include="GraphicObj.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
