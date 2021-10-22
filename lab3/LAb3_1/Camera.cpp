@@ -56,3 +56,7 @@ void Camera::GoUD(float up)
 	spherical.y += up;
 
 }
+void Camera::GoFN(float farAw)
+{
+	spherical.x += farAw;
+}

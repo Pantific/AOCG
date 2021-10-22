@@ -25,5 +25,6 @@ public:
 	// функция для установки матрицы камеры
 	void apply();
 	//void setPosition();
+	void GoFN(float farAw);
 };
 

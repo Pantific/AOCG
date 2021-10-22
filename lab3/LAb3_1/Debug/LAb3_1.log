@@ -1,5 +1,2 @@
-﻿  Lab3.cpp
-C:\Git\lab3\LAb3_1\Lab3.cpp(13,30): warning C4305: аргумент: усечение из "double" в "float"
-C:\Git\lab3\LAb3_1\Lab3.cpp(21,31): warning C4244: инициализация: преобразование "BOOL" в "float", возможна потеря данных
-C:\Git\lab3\LAb3_1\Lab3.cpp(23,13): warning C4305: return: усечение из "double" в "float"
+﻿  Camera1.cpp
   LAb3_1.vcxproj -> C:\Git\lab3\Debug\LAb3_1.exe

@@ -1,1 +1,6 @@
-﻿  lab1.vcxproj -> D:\Graphic\lab1\Debug\lab1.exe
+﻿  Lab1.cpp
+C:\Git\lab1\lab1\Lab1.cpp(35,35): warning C4305: аргумент: усечение из "double" в "GLclampf"
+C:\Git\lab1\lab1\Lab1.cpp(44,50): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Git\lab1\lab1\Lab1.cpp(44,36): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+C:\Git\lab1\lab1\Lab1.cpp(44,23): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
+  lab1.vcxproj -> C:\Git\lab1\Debug\lab1.exe

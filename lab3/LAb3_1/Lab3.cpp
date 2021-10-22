@@ -15,6 +15,7 @@ Camera1 camera1(15, 15, 7.5);
 float sec=0;
 float secLR = 0;
 float secUD = 0;
+float secFN = 0;
 float Fr()
 {
 	QueryPerformanceCounter(&newValue);
@@ -58,8 +59,20 @@ void Simulation()
 			std::cout << "U\n";
 			camera.GoUD(secUD);
 		}
+		if (CameraBackward == 1)
+		{
+			secFN = sec * (-1);
+			std::cout << "Add\n";
+			camera.GoFN(secFN);
+		}
+		if (CameraForward == 1)
+		{
+			secFN = sec;
+			std::cout << "Far\n";
+			camera.GoFN(secFN);
+		}
 	}
-	if(cameraSwap==1)
+	if (cameraSwap == 1)
 	{
 		if (CameraLeft == 1)
 		{
@@ -85,10 +98,22 @@ void Simulation()
 			std::cout << "U\n";
 			camera1.GoUD(secUD);
 		}
+		if (CameraBackward == 1)
+		{
+			secFN = sec * (-1);
+			std::cout << "Add\n";
+			camera1.GoFN(secFN);
+		}
+		if (CameraForward == 1)
+		{
+			secFN = sec;
+			std::cout << "Far\n";
+			camera1.GoFN(secFN);
+		}
+		// ПЕРЕРИСОВАТЬ ОКНО
 	}
-	// ПЕРЕРИСОВАТЬ ОКНО
 	glutPostRedisplay();
-};
+}
 // функция вызывается при перерисовке окна
 // в том числе и принудительно, по командам glutPostRedisplay
 void Display(void)
@@ -115,10 +140,11 @@ void Display(void)
 void KeyboardFunc(unsigned char key, int x, int y)
 {
 	std::cout << "Key is " << key<<"\n";
-	if (key == 'c' and cameraSwap == 0)
-		cameraSwap = 1;
-	else
-		cameraSwap = 0;
+	if (key == 'c')
+		if (cameraSwap == 0)
+			cameraSwap = 1;
+		else
+			cameraSwap = 0;
 };
 void Reshape(int w, int h)
 {
