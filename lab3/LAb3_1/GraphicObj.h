@@ -27,5 +27,6 @@ public:
 	void setСolor(float r, float g, float b);
 	// Вывести объект
 	void draw(void);
+	void recalculateModelMatrix();
 };
 

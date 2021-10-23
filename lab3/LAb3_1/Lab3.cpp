@@ -186,8 +186,8 @@ int main(int argc, char* argv[])
 	GrOb[1].setAngle(0);
 	GrOb[2].setPosition(0.0, 0.0, 4.0);
 	GrOb[3].setPosition(0.0, 0.0, -4.0);
-	GrOb[2].setAngle(90);
-	GrOb[3].setAngle(-90);
+	GrOb[2].setAngle(-90);
+	GrOb[3].setAngle(90);
 	GrOb[2].setСolor(0.0, 1.0, 0.0);
 	GrOb[3].setСolor(0.0, 0.0, 1.0);
 	QueryPerformanceCounter(&oldValue);
