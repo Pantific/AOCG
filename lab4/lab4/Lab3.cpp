@@ -5,13 +5,10 @@
 #include <iostream>
 #include"GraphicObj.h"
 #include"Camera.h"
-#include"Camera1.h"
 // функция вызывается каждые 20 мс
 LARGE_INTEGER oldValue, newValue;
 GraphicObject GrOb[4];
-bool cameraSwap = 0;
 Camera camera(22.5,45.0,70.52);
-Camera1 camera1(15, 15, 7.5);
 float sec=0;
 float secLR = 0;
 float secUD = 0;
@@ -33,8 +30,6 @@ void Simulation()
 	bool CameraDown = GetAsyncKeyState(VK_DOWN);
 	bool CameraForward = GetAsyncKeyState(VK_ADD);
 	bool CameraBackward = GetAsyncKeyState(VK_SUBTRACT);
-	if (cameraSwap == 0)
-	{
 		if (CameraLeft == 1)
 		{
 			secLR = sec * (-1);
@@ -70,48 +65,8 @@ void Simulation()
 			secFN = sec;
 			std::cout << "Far\n";
 			camera.GoFN(secFN);
-		}
-	}
-	if (cameraSwap == 1)
-	{
-		if (CameraLeft == 1)
-		{
-			secLR = sec * (-1);
-			std::cout << "L\n";
-			camera1.GoLR(secLR);
-		}
-		if (CameraRight == 1)
-		{
-			secLR = sec;
-			std::cout << "R\n";
-			camera1.GoLR(secLR);
-		}
-		if (CameraDown == 1)
-		{
-			secUD = sec * (-1);
-			std::cout << "D\n";
-			camera1.GoUD(secUD);
-		}
-		if (CameraUp == 1)
-		{
-			secUD = sec;
-			std::cout << "U\n";
-			camera1.GoUD(secUD);
-		}
-		if (CameraBackward == 1)
-		{
-			secFN = sec * (-1);
-			std::cout << "Add\n";
-			camera1.GoFN(secFN);
-		}
-		if (CameraForward == 1)
-		{
-			secFN = sec;
-			std::cout << "Far\n";
-			camera1.GoFN(secFN);
 		}
 		// ПЕРЕРИСОВАТЬ ОКНО
-	}
 	glutPostRedisplay();
 }
 // функция вызывается при перерисовке окна
@@ -125,10 +80,7 @@ void Display(void)
 	// включаем тест глубины
 	glEnable(GL_DEPTH_TEST);
 	// устанавливаем камеру
-	if(cameraSwap==0)
 	camera.apply();
-	if (cameraSwap == 1)
-		camera1.apply();
 	for (int i = 0; i < 4; i++)
 	{
 		GrOb[i].draw();
@@ -140,11 +92,6 @@ void Display(void)
 void KeyboardFunc(unsigned char key, int x, int y)
 {
 	std::cout << "Key is " << key<<"\n";
-	if (key == 'c')
-		if (cameraSwap == 0)
-			cameraSwap = 1;
-		else
-			cameraSwap = 0;
 };
 void Reshape(int w, int h)
 {

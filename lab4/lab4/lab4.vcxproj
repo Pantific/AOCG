@@ -152,14 +152,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Camera.cpp" />
-    <ClCompile Include="Camera1.cpp" />
     <ClCompile Include="GraphicObj.cpp" />
     <ClCompile Include="Lab3.cpp" />
+    <ClCompile Include="Light.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
-    <ClInclude Include="Camera1.h" />
     <ClInclude Include="GraphicObj.h" />
+    <ClInclude Include="Light.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

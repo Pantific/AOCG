@@ -1,0 +1,23 @@
+﻿  Camera.cpp
+  GraphicObj.cpp
+  Lab3.cpp
+C:\Git\lab4\lab4\Lab3.cpp(11,30): warning C4305: аргумент: усечение из "double" в "float"
+C:\Git\lab4\lab4\Lab3.cpp(19,31): warning C4244: инициализация: преобразование "BOOL" в "float", возможна потеря данных
+C:\Git\lab4\lab4\Lab3.cpp(21,13): warning C4305: return: усечение из "double" в "float"
+  Light.cpp
+C:\Git\lab4\lab4\Light.h(17,8): error C2061: синтаксическая ошибка: идентификатор "vec3"
+C:\Git\lab4\lab4\Light.h(17,7): error C2535: Light::Light(void): функция-член уже определена или объявлена
+C:\Git\lab4\lab4\Light.h(16): message : см. объявление "Light::Light"
+C:\Git\lab4\lab4\Light.h(20,19): error C2061: синтаксическая ошибка: идентификатор "vec3"
+C:\Git\lab4\lab4\Light.h(21,18): error C2061: синтаксическая ошибка: идентификатор "vec4"
+C:\Git\lab4\lab4\Light.h(22,18): error C2061: синтаксическая ошибка: идентификатор "vec4"
+C:\Git\lab4\lab4\Light.h(23,19): error C2061: синтаксическая ошибка: идентификатор "vec4"
+C:\Git\lab4\lab4\Light.h(30,7): error C3646: position: неизвестный спецификатор переопределения
+C:\Git\lab4\lab4\Light.h(30,15): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Git\lab4\lab4\Light.h(32,7): error C3646: ambient: неизвестный спецификатор переопределения
+C:\Git\lab4\lab4\Light.h(32,14): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Git\lab4\lab4\Light.h(34,7): error C3646: diffuse: неизвестный спецификатор переопределения
+C:\Git\lab4\lab4\Light.h(34,14): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+C:\Git\lab4\lab4\Light.h(36,7): error C3646: specular: неизвестный спецификатор переопределения
+C:\Git\lab4\lab4\Light.h(36,15): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  Создание кода...
