@@ -9,6 +9,7 @@
 #include <GLM/gtc/type_ptr.hpp>
 #include<iostream>
 // КЛАСС ДЛЯ РАБОТЫ С КАМЕРОЙ
+//x=r y=theta z=fi
 class Camera
 {
 	// необходимые свойства

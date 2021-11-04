@@ -10,7 +10,7 @@
 LARGE_INTEGER oldValue, newValue;
 GraphicObject GrOb[4];
 bool cameraSwap = 0;
-Camera camera(22.5,45.0,70.52);
+Camera camera(17.5,45.0,63.62);
 Camera1 camera1(15, 15, 7.5);
 float sec=0;
 float secLR = 0;
@@ -37,25 +37,25 @@ void Simulation()
 	{
 		if (CameraLeft == 1)
 		{
-			secLR = sec * (-1);
+			secLR = sec;
 			std::cout << "L\n";
 			camera.GoLR(secLR);
 		}
 		if (CameraRight == 1)
 		{
-			secLR = sec;
+			secLR = sec*-1;
 			std::cout << "R\n";
 			camera.GoLR(secLR);
 		}
 		if (CameraDown == 1)
 		{
-			secUD = sec * (-1);
+			secUD = sec;
 			std::cout << "D\n";
 			camera.GoUD(secUD);
 		}
 		if (CameraUp == 1)
 		{
-			secUD = sec;
+			secUD = sec*-1;
 			std::cout << "U\n";
 			camera.GoUD(secUD);
 		}
