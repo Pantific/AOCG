@@ -1,0 +1,2 @@
+C:/Git/lab11/GLM/GLM/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Git/lab11/GLM/GLM/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

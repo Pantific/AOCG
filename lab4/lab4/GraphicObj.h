@@ -1,11 +1,6 @@
 ﻿#pragma once
-#include <windows.h>
-#include "GL/freeglut.h"
-#include <cmath>
-#include <GLM/glm.hpp>
-#include <GLM/gtx/transform.hpp>
-#include <GLM/gtc/type_ptr.hpp>
-
+#include"Header.h"
+#include"PhongMaterial.h"
 class GraphicObject
 {
 private:
@@ -16,6 +11,9 @@ private:
 	glm::mat4 modelMatrix;
 	// Цвет модели
 	glm::vec3 color;
+	// Используемый материал
+	std::shared_ptr<PhongMaterial> material;
+	//std::vector<std::shared_ptr<PhongMaterial>> materials;
 public:
 	// Конструктор
 	GraphicObject(void);
@@ -27,5 +25,8 @@ public:
 	void setСolor(float r, float g, float b);
 	// Вывести объект
 	void draw(void);
+	void recalculateModelMatrix();
+	// Установка используемого материала
+	void setLightMaterial(std::shared_ptr<PhongMaterial>);
 };
 

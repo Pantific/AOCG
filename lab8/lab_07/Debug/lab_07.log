@@ -1,0 +1,3 @@
+﻿  Simulation.cpp
+C:\Git\lab8\lab_07\Simulation.h(30,32): warning C4091: extern : пропускается слева от "MoveDirection", когда ни одна переменная не объявлена
+  lab_07.vcxproj -> C:\Git\lab8\Debug\lab_07.exe

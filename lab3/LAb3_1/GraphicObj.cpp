@@ -30,6 +30,7 @@ void GraphicObject::draw(void)
 	glMultMatrixf(glm::value_ptr(this->modelMatrix));
 	glutWireTeapot(1);
 	glPopMatrix();
+	this->recalculateModelMatrix();
 };
 
 void GraphicObject::recalculateModelMatrix()

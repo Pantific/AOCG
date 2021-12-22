@@ -1,0 +1,24 @@
+﻿  Camera.cpp
+  Data.cpp
+C:\Git\lab9\GameObjectFactory.h(5,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Git\lab9\GameObjectFactory.h(6,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Git\lab9\Data.cpp(67,121): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(67,113): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(68,121): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(68,113): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(69,122): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(69,114): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(75,135): warning C4244: аргумент: преобразование "_Ty2" в "float", возможна потеря данных
+          with
+          [
+              _Ty2=int
+          ]
+C:\Git\lab9\Data.cpp(75,107): warning C4244: аргумент: преобразование "_Ty1" в "float", возможна потеря данных
+          with
+          [
+              _Ty1=int
+          ]
+C:\Git\lab9\Data.cpp(76,103): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+C:\Git\lab9\Data.cpp(76,86): warning C4244: аргумент: преобразование "int" в "float", возможна потеря данных
+  Создание кода...
+  Project1.vcxproj -> C:\Git\lab9\Debug\Project1.exe

@@ -1,0 +1,17 @@
+﻿  CameraFixed.cpp
+C:\Git\lab10\CameraFixed.cpp(62,50): warning C4244: =: преобразование "GLdouble" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Git\lab10\CameraFixed.cpp(63,23): warning C4244: =: преобразование "GLdouble" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Git\lab10\CameraFixed.cpp(64,50): warning C4244: =: преобразование "GLdouble" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  Project1.vcxproj -> C:\Git\lab10\Debug\Project1.exe

@@ -1,14 +1,7 @@
 ﻿#pragma once
-#include <windows.h>
-#include <cmath>
-#include <GL/gl.h>
-#include <GL/glut.h>
-#include "GL/freeglut.h"
-#include <GLM/glm.hpp>
-#include <GLM/gtx/transform.hpp>
-#include <GLM/gtc/type_ptr.hpp>
-#include<iostream>
+#include"Header.h"
 // КЛАСС ДЛЯ РАБОТЫ С КАМЕРОЙ
+//x=r y=theta z=fi
 class Camera
 {
 	// необходимые свойства

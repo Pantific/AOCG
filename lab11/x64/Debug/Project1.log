@@ -1,0 +1,40 @@
+﻿  Data.cpp
+C:\Git\lab11\Data.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Decal.cpp
+C:\Git\lab11\Decal.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  GameObjectFactory.cpp
+C:\Git\lab11\GameObjectFactory.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  globalFunctions.cpp
+C:\Git\lab11\globalFunctions.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Camera.cpp
+C:\Git\lab11\Camera.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  CameraFixed.cpp
+C:\Git\lab11\Camera.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  CameraFree.cpp
+C:\Git\lab11\Camera.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  GameObject.cpp
+C:\Git\lab11\GameObject.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  GraphicObject.cpp
+C:\Git\lab11\GraphicObject.h(5,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  mesh.cpp
+C:\Git\lab11\Mesh.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Material.cpp
+C:\Git\lab11\Material.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  PhongMaterial.cpp
+C:\Git\lab11\Material.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  PhongMaterialWithTexture.cpp
+C:\Git\lab11\Material.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  SETTINGS.cpp
+C:\Git\lab11\SETTINGS.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Simulation.cpp
+C:\Git\lab11\Simulation.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Main.cpp
+C:\Git\lab11\Main.cpp(1,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Light.cpp
+C:\Git\lab11\Light.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  projectGlobalConst.cpp
+C:\Git\lab11\projectGlobalConst.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Texture.cpp
+C:\Git\lab11\Texture.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Git\lab11\Texture.h(3,10): fatal error C1083: Не удается открыть файл включение: GL/glew.h: No such file or directory,
+  Создание кода...

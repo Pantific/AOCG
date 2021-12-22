@@ -11,17 +11,18 @@ LARGE_INTEGER oldValue, newValue;
 GraphicObject GrOb[4];
 bool cameraSwap = 0;
 Camera camera(17.5,45.0,63.62);
-Camera1 camera1(15, 15, 7.5);
+Camera1 camera1;
 float sec=0;
 float secLR = 0;
 float secUD = 0;
 float secFN = 0;
+float secLUD = 0;
 float Fr()
 {
 	QueryPerformanceCounter(&newValue);
 	float Simulation_Time_Passed = (QueryPerformanceFrequency(&oldValue) - QueryPerformanceFrequency(&newValue)) / QueryPerformanceFrequency(&newValue);
 	//return Simulation_Time_Passed;
-	return 0.17;
+	return 0.05;
 }
 void Simulation()
 {
@@ -33,6 +34,7 @@ void Simulation()
 	bool CameraDown = GetAsyncKeyState(VK_DOWN);
 	bool CameraForward = GetAsyncKeyState(VK_ADD);
 	bool CameraBackward = GetAsyncKeyState(VK_SUBTRACT);
+
 	if (cameraSwap == 0)
 	{
 		if (CameraLeft == 1)
@@ -76,29 +78,29 @@ void Simulation()
 	{
 		if (CameraLeft == 1)
 		{
-			secLR = sec * (-1);
+			secLR = sec/2;
 			std::cout << "L\n";
-			camera1.GoLR(secLR);
+			camera1.GoL(secLR);
 		}
 		if (CameraRight == 1)
 		{
-			secLR = sec;
+			secLR = sec/2;
 			std::cout << "R\n";
-			camera1.GoLR(secLR);
+			camera1.GoR(secLR);
 		}
 		if (CameraDown == 1)
 		{
-			secUD = sec * (-1);
+			secUD = 0.001;
 			std::cout << "D\n";
-			camera1.GoUD(secUD);
+			camera1.GoD(secUD);
 		}
 		if (CameraUp == 1)
 		{
-			secUD = sec;
-			std::cout << "U\n";
-			camera1.GoUD(secUD);
+			secUD = 0.001;
+			std::cout << "U1\n";
+			camera1.GoU(secUD);
 		}
-		if (CameraBackward == 1)
+		/*if (CameraBackward == 1)
 		{
 			secFN = sec * (-1);
 			std::cout << "Add\n";
@@ -109,8 +111,7 @@ void Simulation()
 			secFN = sec;
 			std::cout << "Far\n";
 			camera1.GoFN(secFN);
-		}
-		// ПЕРЕРИСОВАТЬ ОКНО
+		}*/
 	}
 	glutPostRedisplay();
 }
@@ -145,6 +146,34 @@ void KeyboardFunc(unsigned char key, int x, int y)
 			cameraSwap = 1;
 		else
 			cameraSwap = 0;
+
+	if(cameraSwap==1)
+	{
+		if (key == 'a')
+		{
+			secFN = sec * (-1);
+			std::cout << "A\n";
+			camera1.SpinLR(secFN);
+		}
+		if (key == 'd')
+		{
+			secFN = sec;
+			std::cout << "D\n";
+			camera1.SpinLR(secFN);
+		}
+		if (key == 'w')
+		{
+			secLUD = sec;
+			std::cout << "W\n";
+			camera1.SpinUD(secLUD);
+		}
+		if (key == 's')
+		{
+			secLUD = sec * (-1);
+			std::cout << "D\n";
+			camera1.SpinUD(secLUD);
+		}
+	}
 };
 void Reshape(int w, int h)
 {
